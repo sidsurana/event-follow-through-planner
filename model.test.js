@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),M=require('./model');
+assert(M.overlap(M.events[1],M.events[2],0));assert(!M.overlap(M.events[0],M.events[3],1));
+const best=M.optimize(M.events,18000,40000,1);assert(best.cost<=18000);assert.equal(M.conflicts(M.events.filter(e=>best.selected.includes(e.id)),best.assignments,1).length,0);assert(best.pipeline>0);
+const all=M.optimize(M.events,999999,40000,1);assert.equal(all.selected.length,4);assert.notEqual(all.assignments.iitsec,all.assignments.technet);
+const wrong={iitsec:M.people[0],technet:M.people[0]};assert.equal(M.conflicts([M.events[1],M.events[2]],wrong,1).length,1);
+const none=M.optimize(M.events,0,40000,1);assert.equal(none.selected.length,0);assert.equal(none.pipeline,0);
+const tight=M.optimize(M.events,3500,40000,1);assert.deepEqual(tight.selected,['data']);
+const changed=M.events.map(e=>({...e,meetings:e.id==='technet'?1000:e.meetings}));assert(M.optimize(changed,18000,40000,1).selected.includes('technet'));
+const p=M.pipeline(M.opportunities),dup=M.pipeline([...M.opportunities,M.opportunities[0]]);assert.equal(p.openAmount,dup.openAmount);assert.equal(p.openAmount,308000);assert.equal(p.weighted,102800);assert.equal(p.booked,96000);assert.equal(p.recognized,8000);assert.equal(p.attribution.reduce((s,e)=>s+e.amount,0),p.openAmount);assert.equal(p.stale.length,2);assert.equal(p.overdue.length,2);
+const memo=M.brief(M.events,best.selected,best.assignments,18000,40000,1,M.opportunities);assert(memo.includes('not revenue'));assert(memo.includes('$308,000'));assert(memo.includes('$8,000'));assert(memo.includes('No selected attendee is double-booked'));assert.equal(M.shift('2026-12-03',2),'2026-12-05');
+console.log('PASS: conflict detection, feasible optimization, two-person allocation, budget/yield changes, zero budget, deduped attribution, pipeline/bookings/revenue separation and brief');

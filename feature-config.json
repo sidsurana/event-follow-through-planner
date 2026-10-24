@@ -1,0 +1,54 @@
+{
+  "project": "usul",
+  "title": "Plan the event follow-through",
+  "description": "Turn the current event shortlist and fictional CRM into a targeted execution and follow-up brief.",
+  "capability": "event-gtm",
+  "sections": [
+    {
+      "id": "thesis",
+      "title": "Event-specific GTM thesis"
+    },
+    {
+      "id": "questions",
+      "title": "Meeting qualification questions"
+    },
+    {
+      "id": "followup",
+      "title": "Owned follow-up plan"
+    }
+  ],
+  "gatewayTask": "cos.usul.event-gtm.v1",
+  "gatewayProject": "sid-cos-usul-markets-20261021",
+  "company": "Usul",
+  "purpose": "Turn event notes into a focused preparation and follow-up plan.",
+  "label": "Event choice and operating constraints",
+  "notesKey": "eventplan",
+  "example": "Synthetic example: Two teammates can attend one government-industry event next month. We want to validate a federal procurement workflow, not book speculative pipeline. No registration, confirmed meetings, contacts or budget approval exists. Draft preparation and follow-up actions; public event dates still need verification.",
+  "support": {
+    "conflicts": "Travel dates and conflicts are unverified unless explicitly supplied. Do not claim a feasible itinerary or confirmed staffing.",
+    "crm": "No real CRM, contacts, revenue or attributed opportunities supplied. Pipeline is not recognized revenue.",
+    "tasks": "Propose preparation and follow-up with accountable owners. No outreach, registration or CRM write."
+  },
+  "color": "#0e191d",
+  "bg": "#f8fbfb",
+  "accent": "#dfe9e8",
+  "url": "https://usul.com",
+  "evidenceIds": [
+    "eventplan",
+    "conflicts",
+    "crm",
+    "tasks",
+    "limits"
+  ],
+  "paused": false,
+  "sources": [
+    {
+      "label": "Usul \u2014 role responsibilities",
+      "url": "https://jobs.ashbyhq.com/usul/d0744f31-2fb8-462c-8c0d-04978d589d40"
+    },
+    {
+      "label": "Usul \u2014 product context",
+      "url": "https://usul.com"
+    }
+  ]
+}

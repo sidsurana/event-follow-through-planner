@@ -1,0 +1,4 @@
+/* Company-inspired visual alignment, October 23 2026. Independent work sample. */
+:root{--navy:#0e191d;--ink:#132126;--muted:#627277;--orange:#dfe9e8;--cream:#fafcfc;--line:#dce4e5}.hero{background:#0e191d;color:#dfe9e8}.hero h1{font-family:Arial,sans-serif;font-weight:500;letter-spacing:-2.4px}.hero p{color:#d0dedf}.hero .eyebrow{color:#b7d1d0}.primary{background:#0e191d;color:white}header{background:#fff}.hero .primary{background:#dfe9e8;color:#0e191d}
+#cos-ai-panel{background:#fafafa!important;color:#202020!important;border-color:#d8d8d8!important}#cos-ai-panel p,#cos-ai-panel li,#cos-ai-panel h2,#cos-ai-panel h3,#cos-ai-panel summary,#cos-ai-panel label{color:#202020!important}#cos-ai-generate{background:#222!important;color:#fff!important}
+header{color:#0e191d}header .brand,header .symbol,header nav a{color:#0e191d}header .brand small,header .brand-divider{color:#52666a}header .demo{color:#30494e;border-color:#c6d5d5}header nav a:hover{color:#24585b}
